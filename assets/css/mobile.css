@@ -1,0 +1,10 @@
+@media screen and  (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .main-content{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    
+}

@@ -1,0 +1,191 @@
+@import url(https://fonts.bunny.net/css?family=open-sans:400,400i,500,500i,600,600i,700,700i,800,800i);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+   font-family: 'Open Sans', sans-serif;
+   background-color: aliceblue;/* Tinggi header navbar */
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  height: 56px;
+  z-index: 1;
+}
+
+.nav-user{
+   color: #f8f9fa;
+   font-weight: 700;
+   margin-right: 50px;
+}
+
+.sidebar-logout{
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 70%;
+}
+
+.link-logout{
+  text-decoration: none;
+  color: #f8f9fa;
+  background-color: #13489E;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.link-logout i{
+  margin-right: 10px;
+}
+.link-logout:hover{
+  background-color: #0a5fbb;
+  color: #f8f9fa;
+}
+
+.dropdown-menu[data-bs-popper] {
+   top: 100%;
+   left: 5;
+   margin-top: var(--bs-dropdown-spacer);
+}
+
+.navbar-brand{
+   margin-left: 50px;
+   font-size: 30px;
+   color: #f8f9fa;
+   font-weight: 700;
+}
+
+.navbar-brand:hover{
+   color: #f8f9fa;
+}
+
+.sidebar {
+   position: fixed;
+   top: 56px; /* Tinggi header navbar */
+   bottom: 0;
+   left: 0;
+   padding-top: 0.5rem;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   overflow-x: hidden;
+   z-index: 100;
+   padding: 30px 0px 0px 0px;
+ }
+ 
+ .sidebar-sticky {
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+ }
+
+ .nav-item{
+  margin-top: 5px;
+ }
+ 
+ .main-content {
+   margin-top: 56px; /* Tinggi header navbar */
+ }
+
+ .sidebar .nav-link {
+  text-transform: uppercase;
+   font-weight: 700;
+   color: #333;
+   padding: 15px 20px;
+ }
+
+ .sidebar .nav-link:hover {
+   background-color: #13489E;
+   color: #fff;
+ }
+
+ .sidebar .nav-link i {
+  margin-right: 7px;
+ }
+ 
+ /* Ganti warna latar belakang item menu aktif pada sidebar */
+ .sidebar .nav-link.active {
+   background-color: #13489E;
+   color: #fff;
+ }
+ 
+ /* Atur padding untuk konten di dalam main area */
+ .main-content {
+   padding: 15px;
+ }
+ 
+ /* Atur tinggi sidebar agar sesuai dengan tinggi jendela */
+ @media (min-width: 768px) {
+   .sidebar {
+     height: calc(100vh - 56px); /* 56px adalah tinggi header */
+   }
+ }
+ 
+ /* Ganti warna latar belakang navbar */
+ .navbar {
+   background-color: #f8f9fa;
+ }
+ 
+ /* Sesuaikan warna teks dan batas menu pada navbar */
+ .navbar-nav .nav-link {
+   color: #333;
+   border-bottom: 2px solid transparent;
+   transition: border-bottom 0.2s;
+ }
+ 
+ /* Atur warna teks dan batas menu pada navbar saat dihover */
+ .navbar-nav .nav-link:hover {
+   color: #007bff;
+   border-bottom: 2px solid #007bff;
+ }
+
+.main-content{
+   margin-top: 4%;
+   margin-left: 20%;
+   margin-right: 2%;
+}
+
+.nav-bottom{
+  display: none;
+}
+
+.nav-user{
+  cursor: pointer;
+}
+.nav-dropdown{
+  display: none;
+  justify-content: center;
+  background-color: #0D6EFD;
+  position: fixed;
+  transition: 2s ease-in-out;
+}
+
+.nav-dropdown ul li:hover{
+  padding: 5px 40px;
+  background-color: #0a5fbb;
+}
+
+.nav-dropdown ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-dropdown ul li{
+ padding: 5px 40px;
+ margin-top: 10px;
+}
+
+.drop-link{
+  text-decoration: none;
+  color: #f8f9fa;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.drop-show{
+  display: block;
+}

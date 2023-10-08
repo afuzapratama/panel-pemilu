@@ -1,0 +1,64 @@
+@media screen and (max-width: 950px) {
+
+   .navbar{
+      padding: 0px 0px 0px 0px;
+      height: 56px;
+      z-index: 1;
+   }
+   
+   .nav-user{
+      color: #f8f9fa;
+      font-weight: 700;
+      margin-right: 30px;
+   }
+   
+   .sidebar-logout{
+     position: absolute;
+     margin-left: 10%;
+     margin-top: 70%;
+   }
+   
+   .link-logout{
+     font-size: 11px;
+     padding: 5px 10px;
+     border-radius: 5px;
+   }
+
+   .link-logout i{
+     margin-right: 5px;
+   }
+      
+   .navbar-brand{
+      margin-left: 30px;
+      font-size: 21px;
+   }
+   
+   .navbar-brand:hover{
+      color: #f8f9fa;
+   }
+   
+   .nav-item{
+     margin-top: 5px;
+   }
+    
+   .main-content {
+      margin-top: 56px; /* Tinggi header navbar */
+   }
+   
+   .sidebar .nav-link {
+      color: #333;
+      font-size: 11px;
+      padding: 10px 10px;
+   }
+   
+   .sidebar .nav-link i {
+     margin-right: 7px;
+   }
+
+   .main-content{
+      margin-top: 6%;
+      margin-left: 18%;
+      margin-right: 2%;
+   }
+    
+}

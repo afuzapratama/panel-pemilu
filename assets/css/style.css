@@ -1,0 +1,36 @@
+@import url(https://fonts.bunny.net/css?family=open-sans:400,400i,500,500i,600,600i,700,700i,800,800i);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgb(194,229,244);
+   font-family: 'open-sans', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   color: #333;
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+}
+
+.welcome-card{
+   text-decoration: none;
+}
+
+.back{
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   font-size: 1.5rem;
+   color: #333;
+   text-decoration: none;
+}
+
+a{
+   text-decoration: none;
+}

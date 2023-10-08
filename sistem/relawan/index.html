@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Saksi</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"  crossorigin="anonymous" />
+   <link rel="stylesheet" href="../../assets/dashboard/css/style.css"/>
+   <link rel="stylesheet" href="../../assets/dashboard/css/tablet.css"/>
+   <link rel="stylesheet" href="../../assets/dashboard/css/mobile.css"/>
+   <link rel="stylesheet" href="../../assets/dashboard/css/color.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-light   bg-primary">
+   <a class="navbar-brand" href="#">KCP</a>
+   <div class="text-end nav-user" id="nav-user">
+     Afuza Pratama <i class="fa-solid fa-bars" id="icon-user"></i>
+     <div class="nav-dropdown" id="nav-drop-user">
+      <ul class="bebe-down">
+        <a href="profil.html" class="drop-link" ><li>Profil</li></a>
+        <hr>
+        <a href="logout.html" class="drop-link" ><li>Logout</li></a>
+      </ul>
+     </div>
+    </div>
+
+  </nav>
+
+ <!-- Sidebar -->
+ <div class="container-fluid">
+   <div class="row">
+     <nav class="col-md-2 d-none d-md-block sidebar" style="background-color: #fff;">
+       <div class="sidebar-sticky">
+         <ul class="nav flex-column">
+           <li class="nav-item">
+             <a class="nav-link active" href="dashboard.html">
+               <i class="fa-solid fa-house"></i>HOME
+             </a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="relawan.html">
+               <i class="fa-solid fa-users"></i>RELAWAN
+             </a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="pemilu.html">
+               <i class="fa-solid fa-box"></i>PEMILU
+             </a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="sop.html">
+              <i class="fa-solid fa-circle-question"></i>SOP
+             </a>
+           </li>
+         </ul>
+         <div class="sidebar-logout">
+          <a class="link-logout" href="../../index.html">
+           <i class="fa-solid fa-circle-left"></i>Logout
+          </a>
+        </div>
+       </div>
+     </nav>
+   </div>
+ </div>
+
+<div class="nav-bottom">
+  <div class="ul">
+    <div class="li">
+      <a class="active" href="dashboard.html">
+        <i class="fa-solid fa-house"></i> HOME
+      </a>
+      <a href="relawan.html">
+        <i class="fa-solid fa-users"></i> RELAWAN
+      </a>
+      <a href="pemilu.html">
+        <i class="fa-solid fa-box"></i> PEMILU
+      </a>
+      <a href="sop.html">
+        <i class="fa-solid fa-circle-question"></i> SOP
+      </a>
+    </div>
+  </div>
+</div>
+ 
+
+ <!-- Content Area -->
+   <div class="row">
+     <main role="main"  class="col-md-12 ml-sm-auto col-lg-12 main">
+      <div class="main-content">
+        <div class="container">
+
+          <div class="back">
+            <a href="../saksi/relawan.html" class="text-danger fw-bold text-uppercase text-decoration-none fs-6"><i class="fa-solid fa-arrow-right fa-flip-horizontal fa-1x"></i> Kembali</a> 
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-12 col-lg-5 offset-md-2 mx-auto mb-3 mt-3">
+              <div class="card">
+                  <div class="card-body">
+                      <form id="wizardForm" enctype="multipart/form-data">
+                          <div class="mb-3 step">
+                              <h3 class="fw-bold">Tahap 1</h3>
+                              <p>Foto Memegang KTP</p>
+                              <hr>
+                              <div id="alert-data-1"></div>
+                              <div class="container mt-3">
+                                  <div class="row">
+                                      <div class="col-md-6 offset-md-3">
+                                          <div class="file-input text-center">
+                                              <label for="file" class="d-block">
+                                                <i class="fa-solid fa-camera fa-2x"></i>
+                                                  <div id="retake">Upload Foto</div>
+                                              </label>
+                                              <input type="file" name="file" id="file" accept="image/*" class="d-none">
+                                              <div class="image-preview mt-3">
+                                                  <img id="preview-image" src="#" alt="Preview" class="img-fluid d-none">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <div class="mb-3 step">
+                              <h3>Tahap 2</h3>
+                              <p>Data Diri Kamu</p>
+                              <hr>
+                              <div id="alert-data-2"></div>
+                              <div class="mb-3">
+                                  <label class="form-label fw-bold">TPS</label>
+                                  <input type="text" class="form-control form-control-sm" id="Sekolah" name="sekolah" value="Sekolah" disabled>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label fw-bold">Nomor Kartu Keluarga (*)</label>
+                                  <input type="text" class="form-control form-control-sm" id="kelas" name="kelas" value="kelas" >
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label fw-bold">Nomor KTP (*)</label>
+                                  <input type="text" class="form-control form-control-sm" id="mapel" name="mapel" value="Desain Web">
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label fw-bold">Nama Lengkap (*)</label>
+                                  <input type="text" class="form-control form-control-sm" id="nama" name="nama" placeholder="Nama Lengkap" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label fw-bold">Tempat Lahir(*)</label>
+                                <input type="text" class="form-control form-control-sm" id="nama" name="nama" placeholder="Nama Lengkap" required>
+                              </div>
+                              <div class="mb-3">
+                                  <div class="row">
+                                    <div class="col-6 mb-2">
+                                      <label class="form-label fw-bold">Jenis Kelamin(*)</label>
+                                      <select class="form-select form-select-sm" aria-label="Small select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                      <label class="form-label fw-bold">Agama (*)</label>
+                                      <select class="form-select form-select-sm" aria-label="Small select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                      <label class="form-label fw-bold">Status Nikah (*)</label>
+                                      <select class="form-select form-select-sm" aria-label="Small select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                      <label class="form-label fw-bold">Pekerjaan (*)</label>
+                                      <select class="form-select form-select-sm" aria-label="Small select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                  <label class="form-label fw-bold">Tanggal Lahir (*)</label>
+                                  <div class="input-group">
+                                      <input type="date" class="form-control form-control-sm" name="tgl_lahir" id="datepicker" placeholder="Select a date" required>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="mb-3 step">
+                              <h3>Tahap 3</h3>
+                              <p>Alamat Rumah Kamu</p>
+                              <hr>
+                              <div id="alert-data-3"></div>
+                              <textarea class="form-control" id="alamat" name="alamat" rows="3" placeholder="Alamat"></textarea>
+                          </div>
+                          <div class="mb-3 step">
+                            <div id="alert-data-4"></div>
+                            <div class="form-check mt-2">
+                              <div class="d-block mx-auto">
+                                 <img id="preview-info" src="#" alt="Preview" class="img-imgInfona">
+                              </div>
+
+                              <div class="profile-info">
+                                <label>Nama:</label>
+                                <p class="card-text">John Doe</p>
+                              </div>
+                            <div class="profile-info">
+                                <label>NIK:</label>
+                                <p class="card-text">1234567890</p>
+                            </div>
+                            <div class="profile-info">
+                                <label>Nomor KK:</label>
+                                <p class="card-text">0987654321</p>
+                            </div>
+                            <div class="profile-info">
+                                <label>Kelurahan:</label>
+                                <p class="card-text">Rengas Pulau</p>
+                            </div>
+                            <div class="profile-info">
+                                <label>TPS:</label>
+                                <p class="card-text">001</p>
+                            </div>
+                            <div class="profile-info">
+                                <label>Alamat KTP:</label>
+                                <p class="card-text">Jalan Contoh No. 123</p>
+                            </div>
+                            <hr>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" value="" id="check">
+                              <label class="form-check-label" for="check">Semua Data Sudah Benar</label>
+                          </div>
+                      
+                          </div>
+                          </div>
+                          <div class="d-flex justify-content-between">
+                              <button type="button" class="btn btn-secondary" id="prevBtn">Sebelumnya</button>
+                              <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+     </main>
+   </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+ <script src="../../assets/dashboard/js/relawan.js"></script>
+ <script src="../../assets/dashboard/js/welcome.js"></script>
+</body>
+</body>
+</html>

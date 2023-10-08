@@ -14,7 +14,7 @@
       margin-right: 0;
       margin-bottom: 15%;
       margin-left: 0 ;
-      z-index: -100;
+      /* z-index: -100; */
    }
    .navbar{
       position: fixed;
@@ -30,6 +30,8 @@
    .navbar-brand{
       font-size: 16px ;
    }
+
+   
    
    /* styles.css */
    .nav-bottom {
@@ -66,9 +68,32 @@
       border-radius: 5px;
       color: #fff; /* Ubah sesuai keinginan Anda */
    }
+
+   a.active {
+      background-color: #06509e;
+      border: #0a5fbb solid 2px;
+      color: #fff;
+   }
    
    .li i {
       margin-right: 5px;
    }
+   .profile-image {
+    max-height: 250px;
+    width: auto;
+    object-fit: cover;
+   }
+   .profile-info {
+      margin-bottom: 5px;
+      font-size: 13px;
+   }
+   .profile-info label {
+      font-weight: bold;
+   }
+   .relawan-menu{
+      position: relative;
+      margin-top: 30%;
+      z-index: 100;
+    }
 
 }
